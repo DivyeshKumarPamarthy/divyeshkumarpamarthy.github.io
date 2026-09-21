@@ -1,3 +1,3 @@
-function externalClickFunction() {
-    alert('External Click Me button clicked!');
+function clickMe() {
+    alert(' Click Me button clicked!');
 }
