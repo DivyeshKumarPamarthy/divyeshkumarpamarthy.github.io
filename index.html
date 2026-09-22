@@ -1,10 +1,318 @@
-<html>
-  <head>
-    <link rel="stylesheet" href="./index.css">
-  </head>
-  <body>
-    <button  onclick="clickMe()">CLICK ME</button>
-    <h1>DIVYESH</h1>
-    <script src="./index.js"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Divyesh Kumar Pamarthy – Resume</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap');
+
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Latin Modern Roman', 'CMU Serif', 'Lora', 'Times New Roman', Georgia, serif;
+      font-size: 9.5pt;
+      line-height: 1.34;
+      color: #000;
+      background: #e2e8f0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 24px;
+    }
+
+    .page {
+      width: 210mm;
+      height: 297mm;
+      max-height: 297mm;
+      overflow: hidden;
+      background: #fff;
+      padding: 12mm 18mm;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ─── HEADER ─── */
+    .header {
+      text-align: center;
+      margin-bottom: 6px;
+    }
+
+    .header h1 {
+      font-size: 20pt;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      margin-bottom: 3px;
+      color: #000;
+    }
+
+    .contact-line {
+      font-size: 9pt;
+      color: #111;
+    }
+
+    .contact-line a {
+      color: #111;
+      text-decoration: none;
+    }
+
+    .contact-line a:hover {
+      text-decoration: underline;
+    }
+
+    /* ─── SECTIONS ─── */
+    .section-title {
+      font-size: 10.5pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-top: 5px;
+      margin-bottom: 3px;
+      padding-bottom: 2px;
+      border-bottom: 1px solid #000;
+    }
+
+    /* ─── EDUCATION ─── */
+    .edu-block {
+      margin-bottom: 3px;
+    }
+
+    .row-justify {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .bold {
+      font-weight: 700;
+    }
+
+    .italic {
+      font-style: italic;
+    }
+
+    /* ─── EXPERIENCE ─── */
+    .exp-block {
+      margin-bottom: 4px;
+    }
+
+    .exp-block .bullet-list {
+      margin-top: 1px;
+    }
+
+    /* ─── PROJECTS ─── */
+    .project-block {
+      margin-bottom: 3px;
+    }
+
+    .project-title-line {
+      font-size: 9.6pt;
+      margin-bottom: 1px;
+    }
+
+    .bullet-list {
+      padding-left: 18px;
+      list-style-type: disc;
+    }
+
+    .bullet-list li {
+      font-size: 9pt;
+      line-height: 1.26;
+      margin-bottom: 0.5px;
+      color: #111;
+    }
+
+    /* ─── TECHNICAL SKILLS ─── */
+    .skills-list {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      margin-top: 3px;
+    }
+
+    .skill-line {
+      font-size: 9.1pt;
+      line-height: 1.32;
+    }
+
+    @media print {
+      body {
+        background: none;
+        padding: 0;
+        margin: 0;
+      }
+      .page {
+        box-shadow: none;
+        width: 210mm;
+        height: 297mm;
+        max-height: 297mm;
+        padding: 12mm 16mm;
+        overflow: hidden;
+        page-break-after: avoid;
+        break-after: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="header">
+    <h1>Divyesh Kumar Pamarthy</h1>
+    <div class="contact-line">
+      +91 94934 80658 |&nbsp;
+      <a href="mailto:divscomics@gmail.com">divscomics@gmail.com</a> |&nbsp;
+      <a href="https://linkedin.com/in/divyesh-kumar-pamarthy-640340275/" target="_blank">linkedin.com/in/divyesh-kumar-pamarthy</a> |&nbsp;
+      <a href="https://github.com/DivyeshKumarPamarthy" target="_blank">github.com/DivyeshKumarPamarthy</a>
+    </div>
+  </header>
+
+  <!-- EDUCATION -->
+  <section class="section">
+    <div class="section-title">Education</div>
+    
+    <div class="edu-block">
+      <div class="row-justify">
+        <span class="bold">Jawaharlal Nehru Technological University</span>
+        <span>Hyderabad, India</span>
+      </div>
+      <div class="row-justify">
+        <span class="italic">Integrated B.Tech + M.Tech in Computer Science and Engineering (2023–2028)</span>
+        <span class="italic">CGPA: 8.45</span>
+      </div>
+    </div>
+
+    <div class="edu-block">
+      <div class="row-justify">
+        <span class="bold">Indian Institute of Technology Madras</span>
+        <span>Chennai, India</span>
+      </div>
+      <div class="row-justify">
+        <span class="italic">BS in Data Science &amp; Applications (Pursuing)</span>
+        <span></span>
+      </div>
+    </div>
+
+    <div class="edu-block">
+      <div class="row-justify">
+        <span class="bold">FIITJEE Junior College</span>
+        <span>Hyderabad, India</span>
+      </div>
+      <div class="row-justify">
+        <span class="italic">Intermediate (Class XI&ndash;XII)</span>
+        <span class="italic">Percentage: 96%</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section">
+    <div class="section-title">Experience</div>
+
+    <div class="exp-block">
+      <div class="row-justify">
+        <span class="bold">Infosys Springboard</span>
+        <span>Remote</span>
+      </div>
+      <div class="row-justify">
+        <span class="italic">AI Intern</span>
+        <span class="italic">July 2026 &ndash; September 2026</span>
+      </div>
+      <ul class="bullet-list">
+        <li>Built LLM-backed application features under industry mentorship, covering prompt design, document parsing, and automated evaluation of unstructured text.</li>
+        <li>Delivered against a milestone-based review cycle: shipped modular FastAPI services over PostgreSQL, wrote automated test suites, and audited each module against the running system before sign-off.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section">
+    <div class="section-title">Projects</div>
+
+    <div class="project-block">
+      <div class="project-title-line">
+        <span class="bold">SmartHire AI</span> &mdash; <span class="italic">AI-Driven Interview &amp; Candidate Evaluation Platform</span>
+      </div>
+      <ul class="bullet-list">
+        <li>Built an end-to-end AI interview platform on FastAPI and PostgreSQL with JWT plus Google OAuth2 authentication and role-based access for Candidate, Recruiter, and Admin.</li>
+        <li>Parsed uploaded r&eacute;sum&eacute;s and generated role-specific interview questions through a pluggable AI provider layer supporting Google Gemini and local Ollama models.</li>
+        <li>Implemented a WebSocket voice interviewer with speech analysis and MediaPipe face-landmark behaviour tracking for real-time engagement and integrity signals.</li>
+        <li>Automated answer scoring, shortlist insights, and downloadable PDF reports, surfaced via React dashboards with live analytics and per-endpoint latency metrics.</li>
+        <li>Project Link: <a href="https://github.com/DivyeshKumarPamarthy/smarthire_ai" target="_blank">https://github.com/DivyeshKumarPamarthy/smarthire_ai</a></li>
+      </ul>
+    </div>
+
+    <div class="project-block">
+      <div class="project-title-line">
+        <span class="bold">Syllabus Note AI</span> — <span class="italic">AI-Powered Study Note Generation Platform</span>
+      </div>
+      <ul class="bullet-list">
+        <li>Engineered an AI-powered note generation platform that transforms textbooks and PDFs into structured study notes using Retrieval-Augmented Generation (RAG).</li>
+        <li>Implemented semantic search via FAISS vector store and HuggingFace sentence-transformer embeddings for accurate, context-aware retrieval.</li>
+        <li>Built a production-ready FastAPI backend with JWT authentication, SQLAlchemy ORM, and fully documented REST APIs.</li>
+        <li>Integrated local LLM inference via Ollama and OpenAI model support for flexible on-premise or cloud deployment.</li>
+        <li>Delivered a responsive Next.js frontend with one-click PDF export for generated study notes.</li>
+        <li>Project Link: <a href="https://github.com/DivyeshKumarPamarthy/Syllabus-Note-AI" target="_blank">https://github.com/DivyeshKumarPamarthy/Syllabus-Note-AI</a></li>
+      </ul>
+    </div>
+
+    <div class="project-block">
+      <div class="project-title-line">
+        <span class="bold">Trekking Management Application</span> — <span class="italic">Multi-Role Web &amp; Async Workflow Platform</span>
+      </div>
+      <ul class="bullet-list">
+        <li>Developed a multi-role platform (Administrator, Trek Staff, Trekker) with authentication, trek booking, slot management, and approval workflows.</li>
+        <li>Built RESTful APIs with Flask, offloading notifications and automated report generation to async Redis and Celery workers, with role-specific dashboards for real-time analytics.</li>
+        <li>Project Link: <a href="https://github.com/DivyeshKumarPamarthy/Trekking-Management-App" target="_blank">https://github.com/DivyeshKumarPamarthy/Trekking-Management-App</a></li>
+      </ul>
+    </div>
+
+    <div class="project-block">
+      <div class="project-title-line">
+        <span class="bold">Placement Portal</span> — <span class="italic">Full-Stack Placement Management System</span>
+      </div>
+      <ul class="bullet-list">
+        <li>Built a placement management system with JWT-secured authentication, role-based access control, and CRUD operations, plus a responsive UI for application tracking and result management.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- TECHNICAL SKILLS -->
+  <section class="section">
+    <div class="section-title">Technical Skills</div>
+    <div class="skills-list">
+      <div class="skill-line">
+        <span class="bold">Programming Languages:</span> Python, JavaScript, TypeScript, Java, C, SQL, HTML/CSS
+      </div>
+      <div class="skill-line">
+        <span class="bold">Web Development &amp; Frameworks:</span> FastAPI, Next.js, Vue.js, React, Django, Flask, Express.js, SQLAlchemy
+      </div>
+      <div class="skill-line">
+        <span class="bold">Machine Learning &amp; AI:</span> LangChain, RAG, HuggingFace, Ollama, OpenAI API, Google Gemini API, Prompt Engineering
+      </div>
+      <div class="skill-line">
+        <span class="bold">Databases &amp; Storage:</span> PostgreSQL, MySQL, SQLite, Redis
+      </div>
+      <div class="skill-line">
+        <span class="bold">Tools &amp; Platforms:</span> Git, GitHub, Docker, REST APIs, JWT, OAuth2, WebSockets, Celery, Microsoft Azure (Learning)
+      </div>
+    </div>
+  </section>
+
+</div>
+
+</body>
 </html>
