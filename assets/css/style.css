@@ -566,6 +566,39 @@ html:not(.js) .cube-caption { display: none; }
   100% { transform: none; }
 }
 
+/* Case-study rows */
+.case { margin-top: 22px; display: grid; gap: 0; border-top: 1px solid var(--line); }
+.case div { display: grid; grid-template-columns: 116px minmax(0, 1fr); gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.case dt { font-family: var(--font-mono); font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--pc); padding-top: 2px; }
+.case dd { font-size: 15px; line-height: 1.55; color: #d3d7df; }
+.built-label { margin-top: 22px; font-family: var(--font-mono); font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--dim); }
+.built-label + .ticks { margin-top: 12px; }
+.mock-note { margin-bottom: 10px; text-align: right; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--dim); }
+
+/* More from GitHub */
+.more { margin-top: clamp(96px, 12vw, 150px); }
+.more-title { font-size: clamp(26px, 3vw, 36px); letter-spacing: -0.03em; }
+.more-sub { margin-top: 10px; color: var(--muted); max-width: 40em; }
+.more-grid { margin-top: 28px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.more-grid a { display: flex; flex-direction: column; gap: 10px; height: 100%; padding: 22px 22px 20px; transition: transform 0.25s var(--ease); }
+.more-grid li { transition: border-color 0.25s; }
+.more-grid li:hover { border-color: var(--line-2); }
+.more-grid li:hover a { transform: translateY(-2px); }
+.more-grid h4 { margin: 0; font-family: var(--font-display); font-size: 21px; letter-spacing: -0.02em; }
+.more-grid p { font-size: 14.5px; color: var(--muted); line-height: 1.55; }
+.more-kind { font-family: var(--font-mono); font-size: 11px !important; letter-spacing: 0.12em; text-transform: uppercase; color: var(--c-red) !important; }
+.more-stack { margin-top: auto; padding-top: 6px; font-family: var(--font-mono); font-size: 12px !important; color: #c3c8d2 !important; }
+
+.job-link { margin-top: 22px; display: inline-flex; align-items: center; gap: 8px; font-weight: 600; color: var(--c-yellow); border-bottom: 1px solid rgba(255, 207, 31, 0.35); padding-bottom: 2px; }
+.job-link svg { width: 15px; height: 15px; transition: transform 0.25s var(--ease); }
+.job-link:hover svg { transform: translateX(3px); }
+.about-copy .hi { color: var(--text); font-weight: 600; }
+a.plain { color: inherit; }
+a.plain:hover { color: var(--text); }
+.footer-links { display: flex; flex-wrap: wrap; gap: 6px 20px; }
+.footer-links a { color: var(--muted); }
+.footer-links a:hover { color: var(--text); }
+
 /* ---------- Skills: six faces ---------- */
 .faces { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
 .face { padding: 26px 26px 28px; }
@@ -634,6 +667,7 @@ html:not(.js) .cube-caption { display: none; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1080px) {
+  .more-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .hud-story { width: min(260px, 30vw); }
   .net-face { grid-template-columns: repeat(3, 10px); grid-auto-rows: 10px; }
   .contact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -677,6 +711,8 @@ html:not(.js) .cube-caption { display: none; }
 }
 
 @media (max-width: 640px) {
+  .more-grid { grid-template-columns: 1fr; }
+  .case div { grid-template-columns: 1fr; gap: 4px; }
   .faces { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
   .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }

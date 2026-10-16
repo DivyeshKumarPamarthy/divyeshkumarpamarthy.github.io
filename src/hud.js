@@ -1,13 +1,13 @@
 /*
  * The intro overlay: move ticker, counters, live cube net, the story lines
- * (named after the stages of the CFOP speedcubing method) and the big name
+ * and the big name
  * behind the cube that decodes itself as the cube gets solved.
  */
 const STAGES = [
-  { tag: 'Stage 1 / 4 · Cross', line: 'Understand the problem.', sub: 'Read the requirements, find the edges that matter, and line them up first.' },
-  { tag: 'Stage 2 / 4 · F2L', line: 'Break it into pieces.', sub: 'Design the system in layers: data, APIs, interfaces. Solve each pair cleanly.' },
-  { tag: 'Stage 3 / 4 · OLL', line: 'Build, test, iterate.', sub: 'Get every piece facing the right way, with tests to prove it.' },
-  { tag: 'Stage 4 / 4 · PLL', line: 'Polish and ship.', sub: 'The last permutation: the details that make it feel finished.' },
+  { tag: 'Stage 1 / 4 · Understand', line: 'Understand the problem.', sub: 'Read the requirements, find the pieces that matter, and line them up first.' },
+  { tag: 'Stage 2 / 4 · Design', line: 'Break it into pieces.', sub: 'Design the system in layers: data, APIs, interfaces.' },
+  { tag: 'Stage 3 / 4 · Build', line: 'Build, test, iterate.', sub: 'Get every piece facing the right way, with tests to prove it.' },
+  { tag: 'Stage 4 / 4 · Ship', line: 'Polish and ship.', sub: 'The last moves: the details that make it feel finished.' },
 ];
 const GLYPHS = 'ABCDEFGHJKLMNPQRSTUVWXYZ0123456789#$%&@*+=?';
 const NAME = 'DIVYESH';

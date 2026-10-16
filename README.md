@@ -34,6 +34,16 @@ The site opens on a scrambled Rubik's cube. Scrolling plays the solving moves on
 
 - **Résumé:** edit `resume.html`, open it in Chrome, Print → Save as PDF (A4, margins "None", background graphics on), and replace `assets/resume/Divyesh-Kumar-Pamarthy-Resume.pdf`.
 
+## Deploying
+
+The site is plain static files, so GitHub Pages serves the repository as-is (`.nojekyll` turns off Jekyll processing).
+
+1. In the repository on GitHub: **Settings → Pages → Build and deployment → Deploy from a branch**, branch `main`, folder `/ (root)`.
+2. If you changed anything in `src/`, run `npm run build` first and commit the updated `assets/js/main.js`.
+3. Commit and push to `main` (GitHub Desktop: **Commit to main**, then **Push origin**). The live site updates within a minute or two.
+
+There is no CI build step on purpose: what is in the repo is exactly what is served.
+
 ## Handy URL flags (for testing)
 
 - `?seed=42`: use a fixed scramble instead of a random one.
