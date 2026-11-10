@@ -35,7 +35,7 @@
   --line-2: rgba(255, 255, 255, 0.14);
   --text: #eef0f4;
   --muted: #a3aab6;
-  --dim: #6b7280;
+  --dim: #8a92a0;
 
   --c-white: #f2f3f5;
   --c-yellow: #ffcf1f;
@@ -565,6 +565,25 @@ html:not(.js) .cube-caption { display: none; }
   45%, 85% { transform: translateX(calc(100% + 1.2em + 0.7em * 1.4)); border-color: var(--pp); box-shadow: 0 0.6em 1.4em -0.4em rgba(255, 132, 23, 0.5); }
   100% { transform: none; }
 }
+
+/* Real screenshots */
+.shots { margin: 0; }
+.shot-frame { border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.12); background: #0b0d12; overflow: hidden; box-shadow: 0 40px 80px -30px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(0, 0, 0, 0.6); transition: transform 0.6s var(--ease), border-color 0.3s; }
+.project:hover .shot-frame { transform: translateY(-4px); border-color: color-mix(in srgb, var(--pc) 45%, rgba(255, 255, 255, 0.12)); }
+.shot-frame .mk-bar { font-size: 12px; padding: 10px 14px; }
+.shot-zoom { display: block; width: 100%; cursor: zoom-in; border-radius: 0; }
+.shot-zoom img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; background: #0b0d12; transition: opacity 0.25s; }
+.shot-zoom img.swap { opacity: 0; }
+.shot-tabs { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px; }
+.shot-tabs button { padding: 7px 13px; border-radius: 999px; border: 1px solid var(--line-2); background: rgba(255, 255, 255, 0.03); font-size: 13px; font-weight: 500; color: var(--muted); transition: color 0.2s, background 0.2s, border-color 0.2s; }
+.shot-tabs button:hover { color: var(--text); border-color: rgba(255, 255, 255, 0.3); }
+.shot-tabs button[aria-pressed='true'] { color: #07080b; background: var(--pc); border-color: var(--pc); font-weight: 600; }
+.shots figcaption { margin-top: 12px; font-size: 13px; color: var(--dim); line-height: 1.5; }
+.lightbox { width: min(1500px, 94vw); max-width: none; padding: 0; border: 1px solid var(--line-2); border-radius: 14px; background: #0b0d12; color: var(--text); overflow: hidden; }
+.lightbox::backdrop { background: rgba(3, 4, 6, 0.86); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+.lightbox img { width: 100%; height: auto; max-height: 88vh; object-fit: contain; }
+.lightbox-close { position: absolute; top: 10px; right: 10px; padding: 7px 14px; border-radius: 999px; background: rgba(7, 8, 11, 0.8); border: 1px solid var(--line-2); font-size: 13px; font-weight: 600; }
+@media (min-width: 901px) { .project { align-items: start; } .project-visual { position: sticky; top: calc(var(--nav-h) + 40px); } }
 
 /* Case-study rows */
 .case { margin-top: 22px; display: grid; gap: 0; border-top: 1px solid var(--line); }

@@ -18,6 +18,7 @@ The site opens on a scrambled Rubik's cube. Scrolling plays the solving moves on
 | `src/hud.js` | Intro overlay: move ticker, live cube net, stage text, decoding name. |
 | `src/ui.js` | Nav, reveal-on-scroll, counters, copy email, mobile menu. |
 | `assets/resume/…pdf` | Résumé PDF served by the "Résumé" buttons. |
+| `assets/img/projects/` | Real screenshots of the projects (WebP, 1600×1000). To add one, drop the file here and add a button to that project's `.shot-tabs` in `index.html`. |
 | `assets/img/` | Favicon, social preview image (`og-image.png`), fallback cube image. |
 | `assets/fonts/` | Self-hosted fonts (Bricolage Grotesque, Inter, JetBrains Mono, Lora). |
 

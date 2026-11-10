@@ -162,6 +162,36 @@ export function initUI({ reduced }) {
     });
   });
 
+  // ---- project screenshots: tabs swap the image, clicking it opens a larger view
+  const lightbox = document.getElementById('lightbox');
+  document.querySelectorAll('[data-shots]').forEach((fig) => {
+    const img = fig.querySelector('.shot-zoom img');
+    const title = fig.querySelector('[data-shot-title]');
+    const tabs = [...fig.querySelectorAll('.shot-tabs button')];
+    tabs.forEach((tab) => tab.addEventListener('click', () => {
+      if (tab.getAttribute('aria-pressed') === 'true') return;
+      tabs.forEach((t) => t.setAttribute('aria-pressed', String(t === tab)));
+      const next = new Image();
+      const apply = () => {
+        img.src = tab.dataset.src;
+        img.alt = tab.dataset.alt;
+        if (title) title.textContent = tab.dataset.title;
+        img.classList.remove('swap');
+      };
+      img.classList.add('swap');
+      next.onload = next.onerror = () => setTimeout(apply, reduced ? 0 : 140);
+      next.src = tab.dataset.src;
+    }));
+    fig.querySelector('.shot-zoom').addEventListener('click', () => {
+      if (!lightbox || !lightbox.showModal) return window.open(img.src, '_blank', 'noopener');
+      const big = lightbox.querySelector('img');
+      big.src = img.src;
+      big.alt = img.alt;
+      lightbox.showModal();
+    });
+  });
+  if (lightbox) lightbox.addEventListener('click', (e) => { if (e.target === lightbox || e.target.closest('.lightbox-close')) lightbox.close(); });
+
   // ---- footer: back to the scrambled cube
   const toTop = document.getElementById('to-top');
   if (toTop) toTop.addEventListener('click', (e) => {
